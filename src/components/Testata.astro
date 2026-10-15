@@ -1,0 +1,12 @@
+---
+const home = Astro.url.pathname === "/";
+const p = home ? "" : "/";
+---
+<header class="testata">
+  <a class="marchio" href="/">Il Magico Mondo di Giuly</a>
+  <nav aria-label="Principale">
+    <a href={`${p}#opere`}>Opere</a>
+    <a href={`${p}#chi-sono`}>Chi sono</a>
+    <a href={`${p}#contatti`}>Contatti</a>
+  </nav>
+</header>

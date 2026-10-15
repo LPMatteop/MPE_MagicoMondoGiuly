@@ -1,0 +1,78 @@
+---
+import Base from "../../layouts/Base.astro";
+import Testata from "../../components/Testata.astro";
+import Piede from "../../components/Piede.astro";
+import { getOpere, getImpostazioni, formattaPrezzo, type Opera } from "../../lib/sanity";
+
+export async function getStaticPaths() {
+  const opere = await getOpere();
+  return opere.map((opera, i) => ({
+    params: { slug: opera.slug },
+    props: {
+      opera,
+      precedente: opere[(i - 1 + opere.length) % opere.length],
+      successiva: opere[(i + 1) % opere.length],
+    },
+  }));
+}
+
+interface Props { opera: Opera; precedente: Opera; successiva: Opera }
+const { opera, precedente, successiva } = Astro.props;
+const imp = await getImpostazioni();
+const img = opera.immagine;
+const scheda = [opera.tecnica, opera.misure, opera.anno].filter(Boolean).join(", ");
+const oggetto = encodeURIComponent(`Informazioni su «${opera.titolo}»`);
+---
+<Base
+  titolo={`${opera.titolo} | Il Magico Mondo di Giuly`}
+  descrizione={`${opera.titolo}${scheda ? `, ${scheda}` : ""}. Un quadro di Giuly.`}
+  immagine={img.grande}
+>
+  <Testata />
+
+  <main id="contenuto" class="dettaglio">
+    <a class="torna" href={`/#opere`}>← Tutte le opere</a>
+
+    <div class="dettaglio-griglia">
+      <a class="dettaglio-quadro cornice" href={img.grande} aria-label={`Apri ${opera.titolo} a piena grandezza`}>
+        <img
+          src={img.src}
+          srcset={img.srcset}
+          sizes="(min-width: 900px) 60vw, 100vw"
+          width={img.larghezza}
+          height={img.altezza}
+          alt={img.alt}
+          fetchpriority="high"
+          style={img.segnaposto ? `background-image:url(${img.segnaposto})` : undefined}
+        />
+      </a>
+
+      <div class="dettaglio-testo">
+        {opera.tema && <p class="occhiello">{opera.tema.nome}</p>}
+        <h1>{opera.titolo}</h1>
+        {scheda && <p class="dettaglio-scheda">{scheda}</p>}
+        {opera.descrizioneHtml && <div class="dettaglio-descrizione" set:html={opera.descrizioneHtml} />}
+
+        <div class="dettaglio-vendita">
+          {opera.venduto ? (
+            <p class="etichetta grande">Venduto</p>
+          ) : opera.acquistabile ? (
+            <>
+              <p class="prezzo">{formattaPrezzo(opera.prezzo!)}</p>
+              <a class="pulsante" href={opera.linkPagamento!} rel="noopener">Acquista</a>
+            </>
+          ) : (
+            imp.email && <a class="pulsante secondario" href={`mailto:${imp.email}?subject=${oggetto}`}>Richiedi informazioni</a>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <nav class="dettaglio-nav" aria-label="Altre opere">
+      <a href={`/opere/${precedente.slug}`}><span>Precedente</span>{precedente.titolo}</a>
+      <a href={`/opere/${successiva.slug}`}><span>Successiva</span>{successiva.titolo}</a>
+    </nav>
+  </main>
+
+  <Piede email={imp.email} instagram={imp.instagram} />
+</Base>

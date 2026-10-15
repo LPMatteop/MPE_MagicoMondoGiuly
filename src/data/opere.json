@@ -1,0 +1,321 @@
+{
+  "hero": {
+    "src": "https://sites.google.com/sitesv-images-rt/AMxu72sKMipkTa_QswN5NiFSPYCeDfS2Xfllk03uOvkLDBgiIMCB3Vh6BXHpnO0YBT__Jeei_LLj7DKlQbLQFHFEqES7v9-d_GBzBeVgQ3a6o7U8qK0rrR88l_eFGZVXSCfsUNGUBTRiIeBOKzgs9kW1wzi7IOCzWVehlq-g5ojgemw7zdK5xODuiLbd6y9dBdHk2jYP4MJ-F2AZ-_6qL24AomNPd9Go4fKpQ7b0vNak3gU=w1280"
+  },
+  "opere": [
+    {
+      "slug": "case-innevate-30x80",
+      "titolo": "Case innevate",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uqi9Od2LgtIULcRinWBbvm6s_AW4_j8bf58EgenWAJcofVURBYWv3-PkcmdmWOWEcKzyc1Dggf4vizhmXpTojT9U6Wg3v6weCmRB2nGrXtk10z6AXo93XWTheJO555qm2ZJAzT4Z7uOVs-FlQFKkp33HvUBAtPLXoT7PH_Set2aMDtTntvElpY2516nOWLy5Z6vBqncOOBKzMa1yyAcB05eP0EMnLGfvDfE8Qx7vw=w1280",
+      "larghezza": "30",
+      "altezza": "80"
+    },
+    {
+      "slug": "case-innevate-30x100",
+      "titolo": "Case innevate",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72sQQf1maxZ94jm3uMu1D5mM-DLl8bMpZ_ItUhW5Kmq4M_WJk5uSYH-jBcRyBE-WPb3QMCrOT59lHWF1Od7NDd-nLlnkHEtGCIKdXg8RYb-vHGRrmOSUUcVvY-WCeTxjlxmXjBM_rBfOUCQBF4Mgq2Vkk_YE9Ywapkz_Tswh8CwxLdlu6k0qyjLtPsbgi_hIz5UgJrSrMBB-eMJWUiz3TBOIfgnlRYNEqXA0_d2AE9E=w1280",
+      "larghezza": "30",
+      "altezza": "100"
+    },
+    {
+      "slug": "case-innevate",
+      "titolo": "Case innevate",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uTKZF9Tg2JMUIc8a9BdSkETOrTLkMwjDUD4ciPGu0GdAgRhCb2tOQPRkJmAlwYgCZIm01vAYb-7X3S_jwfEkDQj56i5Z34zXVR8pqTItewFXL-f5y_Z_Ww3ga50Dt9sEu9JwD_lyCGbsXuU74C4bMb2mMPW358IXHyQf1bwA4DgmPdJ7FlCL79n6NMw9dWEZCqazZDrE8DEUfFXfJunEAtm0CehERtP9fQZQtUSRI=w1280"
+    },
+    {
+      "slug": "case-innevate-2",
+      "titolo": "Case innevate",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72sxHMZ0Rs6q94JP-b-reV3kDO7ottnLNMMhsuYQ8EJeMdFxE8m2nsEk88nLXhsyBtEgQ_FGEwO-PFPKg4zH1dwA3lweN_6kSx_GDLepX9MQXSBPxza7EXRfd9I_bvZuS67cs_r-u9a5Di0SmeTMC5GVvoQ8F7BYXFT_YYoDuenQZaC4dS2v8SGk2CnV_cztfzV4IGeniX3uJR48Jt1SUVNOitRXap-9F9DxweZvVys=w1280"
+    },
+    {
+      "slug": "la-notte-dei-regali-52x21-5",
+      "titolo": "La notte dei regali",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uaP6PHKVQHX1Nd2L6dCkMw32HhHmlUuju7g_jLKvZsq114Wmqqw6ISW7NpdDjQ4BuFzwI5dIrqGwtStZ-AgDvjVHLvoTIAVWlWVX4O_0_57swGqGAJq0sqsMLXCbHyjTNLsaPHDGmrrcZu0nMX8La5nJYQk8r02AH7V0kQfwX17jAzoTlzJLtkV7DmqzK5mIY_FRH6-NG6vxAes_jNdqIuuJY_Eu1O6GLNoLEnGhc=w1280",
+      "larghezza": "52",
+      "altezza": "21,5"
+    },
+    {
+      "slug": "il-mondo-fatato-120x40",
+      "titolo": "Il mondo fatato",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72vDohKE3XUkQ84MU80JQhcZ5e1-miVjDrZXOhsFaMMYX1M9LLZzxPjiFaCd1Ex0ktTMmf3zz7VNiilcN0zmYsnIsGoOHaiSX3l0RIwfJUJF6NcvBj6plarNpJriqZl3MCOGm-3E2YE0H0-PbKb_3RIALPuXpcgbJYX8I10PkXC3PoEtUvUhUNUIt3cNWsUBo3Exjr9S1OVwk4bQC34qMtgDWNdLAcXK0TZRBDoGD5w=w1280",
+      "larghezza": "120",
+      "altezza": "40"
+    },
+    {
+      "slug": "santa-lucia-e-il-grande-foglio-dei-doni-50x50",
+      "titolo": "Santa Lucia e il grande foglio dei doni",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72vpCLvGmjH8NM_OZ5vitu9zPCtTAU0enUBDZYnUIG_nAlkriDVzwi01aG1758ybXbxAnQL2I6RFAo_-Gia8eEKcmlxuZ1fP2DigrHebzQwXL8FvDSGT9ba9QghJPaH1tS8Iy4c-Xo1VJQhUhdgN7Vieuq1qVnJScc5e4yk1s_nQKUy-2Ri6mOTOxlKxu-88eEIleet9Xj2xDb33RbXlN52T3-c005A6da4NGVTE=w1280",
+      "larghezza": "50",
+      "altezza": "50"
+    },
+    {
+      "slug": "santa-lucia-con-asinello-50x50",
+      "titolo": "Santa Lucia con asinello",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72s3whwwo1PXnGov8qPV5FvQBQQiIuWRiELSNwPHsw-weQ_j6JRxRdQMNkGeu897QVu9HAwJWDwE9KFGMgCgjH-0BhZ4zCTEgSUS6WwO2dVDyN5jEYYtEzZGejXGWrr49trK_118bAMnqHY8NkEJEcC6igaeHsRjlZosC2Jy0HD8em8CuuGpy0Lu5nvShOpQdaAAyNiZtgSCTGdSdi-UOjp7vzBv2lvkjtTOCxap=w1280",
+      "larghezza": "50",
+      "altezza": "50"
+    },
+    {
+      "slug": "santa-lucia-e-il-grande-foglio-dei-doni-50x50-2",
+      "titolo": "Santa Lucia e il grande foglio dei doni",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72vryNFtValcSFFmIga5E1p3ys5SIbMJ5EIceZEou5F5IShMimsC2NtkT10v1cxlJPNoQPu-h2Bs-xCMu0vJpKH_FaNnGQxPWNxkeAS5ytO_JRrllDU27mnvfWMlijxoLWnNhlvxNme0u9OetLjKE0gVnzPfV2Uu_-VbQrCtjF8HKzVK1Mjx4vcqAiNO1d7pxBtBak1h_hp6y9-0vi4svsfiaQdW26ARXeygvyU5=w1280",
+      "larghezza": "50",
+      "altezza": "50"
+    },
+    {
+      "slug": "paesaggio-magico-50x70",
+      "titolo": "Paesaggio magico",
+      "categoria": "paesaggi",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72v5LrwkdqukfLcyhX8xzp5WP9MTiFTNbCX7zAnech6O4iN4NqWja8yKqOp8Q6ZIQ3WYGWuuOeylx699Cq-q1Z_iCrJ68M6dSusAJ_RO9BFk233UnG7rM0oir6xXR7aHrESPJwGB-GrtLvvtnjR2VFgbAP_WlzfvvaCeYHX9B1YMeRRBpaiEYzfsdljMAKC-bbFY9g0MimoxHwr0PBoJs6xj8rKxC0Y1c1KLtb0a=w1280",
+      "larghezza": "50",
+      "altezza": "70"
+    },
+    {
+      "slug": "neve",
+      "titolo": "Neve",
+      "categoria": "paesaggi",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72tz77jgRrDPxFAgGl98IvcSdypLeyBRF9m3QOqTHStkuOzXBGJoiH9J-PmLEoqg1L7WPRtuijDe-t32JyW0FqPd6JIzC786xIWD79LkiY7P3COmykGwcOlIIOSz5BtH_8UFxlAfnNQx02v4CH-Ahvb-uubpLysCCzlYpv93yHrvIfLOxkcjAH_5hVyD5TvMzKcWYPkaDgWyavGgK5mLzx050hL-mKYM60eGQTEXvu0=w1280"
+    },
+    {
+      "slug": "cavallino-a-dondolo-35-5x30",
+      "titolo": "Cavallino a dondolo",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72vnYSwtX8hsSyA_nOyI6oYQePF8oXqs-TEe9BvVEC_6mgzekArtKyg6q47PK71TSFNM_3Mcr4JHE9S0_-44B54NacIxF_YTF31wrtZYwW0gaOAzroyN8d38LgdRB5313KWbS2ZulsIVbPiTSm-syv6qDiVmlNq1VGnAB1q3771ODkw_W_mCHq3lk51N8qeeiysFfcPF2DNHTOUFIhE439zuFqe0StyCAPGwSokZKds=w1280",
+      "larghezza": "35,5",
+      "altezza": "30"
+    },
+    {
+      "slug": "il-natale-dell-albero-inclinato-35x50",
+      "titolo": "Il Natale dell'albero inclinato",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72sxoTOp2E8wUAiXXvMUndMuyUI36BGH7WfETWNnmyNRpN3w7QwFw4Z7CE4_A17Fvht3v3QIPEQlXaPRVx9ibOMyd8zoTWUGqXMBEBIJ-hW44RxYlRMTLjripCdbnjw9ALzgpTNhi9HHU7OZ-3LBbe-nPWD5Qq_Qbz0BK6KYjtV9lmJpZQ6XE9Qe3T31k6sjX7tbYGF75x2PEINKoLAZD-NJnKVJNPtO1bmS_qeq=w1280",
+      "larghezza": "35",
+      "altezza": "50"
+    },
+    {
+      "slug": "fata-con-il-paese-sulla-testa-50x25",
+      "titolo": "Fata con il paese sulla testa",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72v5kZ6SoT4_QNbZ3bh6mcqZxf9NgjPW9M8JbHkKaA6q8ZU7IGmpHbsItKPGgUXPK22SLsgfWLNrzTUJ_96yh4Rt0mcvGbfh-EGFH5uaBlQk-E7--LcJJYZg5svYxKI9m0ZnpClf4JzX0XYOXk6j0Z-GeKxGEx7tsYX7S5bC4Hl0JaxKS4jXTZ3HSr0Kvzfl89cXRbBNeMX2M_HO1bhaDVwvcpZQMdxECxt0BwYcMKE=w1280",
+      "larghezza": "50",
+      "altezza": "25"
+    },
+    {
+      "slug": "elefante-gioiello-30x40",
+      "titolo": "Elefante-gioiello",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uismHdtzd2lWO5emFQA189M4eMFdMQT4UIroP-hF-3J32_6eGv7QIyaPbmM55877Z9FqKnJXMXktaNL1Z43X6omXPjMRK913ZI74n-_xyj19_-9X-WK0WV4ddFNoGFh9sSoDwd3oTEWE3qm_O9Y0_kkRP25dXVFc-OnGY7lKVLuhnoiMz6m1eq2ipLNn_tzg4wHwsLiah-WD3a3edmR1bbIQYTsrqrO4OS3iHR=w1280",
+      "larghezza": "30",
+      "altezza": "40"
+    },
+    {
+      "slug": "la-fata-dalle-tasche-magiche-30x40",
+      "titolo": "La fata dalle tasche magiche",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72tE7jF1i3gA0N0ZR-acCIFssDbINldt7Ogsh0yxhXdTqTDOfVt-kYmodN-Vr1l8wim1n4CUOLpa0C750ujsDB8Pc2S1iWHR3Z_iu2byDa3ktwxcRL4DgmGZw5Mlshhrt84ihK_r54hYl_UZq3-qximwjZkuMnJx5LE261LP2UHXb5HOeDt4lw5x73AThO0NvhqgXwE1lEY0QTX0A6RGb8CmzZJyLMA1ZzNWWDUBo-0=w1280",
+      "larghezza": "30",
+      "altezza": "40"
+    },
+    {
+      "slug": "la-vigilia-di-natale",
+      "titolo": "La vigilia di Natale",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uCkQGmBImomFaTs1urHT7zfrG6W9_uctzyFqPXhw-PR7nW5gsIAhfLaj1P_FaMpk9G6gJM8vMo6kEwHoJ8WqsVVb5qMYzW4_IIXnu6y3ohzWB7LzIMhEFzJZ3kozHle-WPQuVgUOvm7A1W5nlhsbs9K9aKNhT47GQ5ZPSDsgbfH4L6f9bvTymeEHtdEyFwG7fCRleQVcDeqjVmmXSUdCvTjVBjocr9yEemH3qdCeM=w1280"
+    },
+    {
+      "slug": "albero-di-natale-10x15",
+      "titolo": "Albero di Natale",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72tqxinNXiKSL2OGsap4C7SSz5Qv0tsOlxqsy-xoqkyulhu00ftbdsdqGWKSP6f6wJELe-m9MsdX0hhFtxId_WTsRl0P-FG6zaVXU2S_inLtHzBddax39AiS90WLNXUNQ6khkK3S_MGCvhdVQ_ttQ-Wo1bGaTItiCOlNM3W8EQ_DKbduVZ19P8qQgoVpyt0Oos8oObV08xQeyotxWjNHgcKwIUiFkKwAAfJyTpFCmcc=w1280",
+      "larghezza": "10",
+      "altezza": "15"
+    },
+    {
+      "slug": "la-notte-dei-regali-24x18",
+      "titolo": "La notte dei regali",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uZ358EBs0DjnO1G3R_TuCGbpUl0jg6BnAdtQ7o_o5FVSogjQJN3PA8hdWonD4zRaqovWAUyQlVG6vKc6wt7dHW9TQK4zGjly8k7ojeHJ7DcVhlRpmOwRWJZlU5kTQpdRuk-Dc7NcjMFJrNXeyPzXSwjEMrch2pInHieq0ZmM5Er_AwMzw1H2uFvFgL9p3PhOgdZ6MMLJV0aQo_7YgjdpnF2-URjJfHDjofacfFLhE=w1280",
+      "larghezza": "24",
+      "altezza": "18"
+    },
+    {
+      "slug": "la-fata-di-cuori-25x35",
+      "titolo": "La fata di cuori",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72v-_PvFh_HfVqeMjFCorP-hATjL8pqaRImLG2KjfTkmQQcxCw954zEcnvNUO9YI8Xj2pgtJN9GOtSgJmGvmw1fnEmMAnEAmEVKJK15zvHO1HClVxqbU_igHOR5zrh4YPDu1ls_lTsLrjSafK1w7Fm_pOf2F8dJ2xZb6SuWtqYvXvQi9Y09U3K-ZGkk1KF6RdHClOzeMqILSpSclTLeMwrjZC4HSmUR7-XxF4A=w1280",
+      "larghezza": "25",
+      "altezza": "35"
+    },
+    {
+      "slug": "la-fata-dei-doni-30x40",
+      "titolo": "La fata dei doni",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uBlmlRFZTd2uj3mIxAi555L31gc1geCBUSl4jsO6xyZW4W8tVUCkGShPbeMb7c0Ou7azqCiilYGvYXiTiqsESSsX9fRpPTlIEE-yHd0gGwJF9CTfhEjoOFGqVdJ0U5WKdFp_LHMWFYhVSrg0n7Qil5tGacolV-0_cF0TIrD0VrGwTwcpvi4FyxPB4Ua64AKbBYORbUNzYH2BAd0I6zc-pKuDTrFy4CWnZMo1qH=w1280",
+      "larghezza": "30",
+      "altezza": "40"
+    },
+    {
+      "slug": "renne-colorate-natalizie-50x70",
+      "titolo": "Renne colorate natalizie",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72ttuTYETtEzlWmzJQXG5SBtvEatapOSQFKVZqaBTPKrtQua_OzwtzmP3xEhZRxPv0dyp_pj8L_6VtYx1IXllyYLK1mJZ_2MRKU3alkiNGwvqAYhZYCGzFzqOzShaKB8jdbtk6VD9Nu7nXWXS5mAAvDsSWJgrnvz3JW3tdciYGu97-klIchbBrpAFd9qCtQSM0T9U64McrNMqKOLyUl1WeXBMuJUlbR6aB6HSVhSS1A=w1280",
+      "larghezza": "50",
+      "altezza": "70"
+    },
+    {
+      "slug": "renne-del-natale-50x70",
+      "titolo": "Renne del Natale",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72vzaCNFJe9aoYlvwv3FsPVwJYMWlHYsgf8iXNQ_iaCL7Yd2pect8cWBSbZe-4Dl6aBxyXueJ5YsM_G2dYIAr16HzRfhk2dKbexItv_bzQGpRx82d8DUNdNpMN2_D2-ME78iGHOv9uXAVFNW5baCr16wjqLAHMIxI_jVpS7iInDapvOeo0aSwTtnEI1--HX4Cgi904KB1Z3nxL27HGfoYvaupjFdaoMhZSPD1A5W2vw=w1280",
+      "larghezza": "50",
+      "altezza": "70"
+    },
+    {
+      "slug": "la-fata-del-natale-74x36",
+      "titolo": "La fata del Natale",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72u4PTrzg_ukP0Lm9hzgqc5t--UqV_FsRcdjPm7kfnvwlL1uRZAQZEtIygMUfba9K18fXYf9tykVzKkWS5wcja0eLuwfg9kPhbZ3vwskQmF-xty4N7AuiLx4uxMCgehfqZMRAxtQ7PPlxkLDztbpSlTj_Y5f-wVGk3HKC8FQVEVRaXcTQumLGaS1mATdXGo8t6plc2HQMnstCpBFKm3CrEOCE2-PyB1ifoQvbS1U=w1280",
+      "larghezza": "74",
+      "altezza": "36"
+    },
+    {
+      "slug": "la-fata-di-cuori-25x35-2",
+      "titolo": "La fata di cuori",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72uJA_87MNv0UPsHkdhDi2GFTK5WUJ5VNO0pmlhHGTk7xPzOohdVt9ubg4vbTpkykttSyY49LjrEkd38izhAhYXOqN7fQmH4gZMZS67_janfYSk0CrErAHRrv_nIvfbmWLT5hN4Nq-JgGh0DL1ag5uKgdWtT2ONIKBnfrPA3n1t88_1KJFOwdsCifLe_O1C2Qa-xxRLu0sc2YSP5kbVw_fdVZc4X-QbbQTXQkMfh=w1280",
+      "larghezza": "25",
+      "altezza": "35"
+    },
+    {
+      "slug": "la-fata-del-prato-stellato-20x30",
+      "titolo": "La fata del prato stellato",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72vHX7QLIL5O3pE1kXRgJQklHh7cFPYoXj-GbQ6t467rZLpAPpA2aUn7OK0cIBh4NOMBdOpAKuh7I907e2eY223I2HMMD0O_K5xu57XsXrqnQKAkqsn1UF2XxOoVIEAQN0Nffv6iX56PjwopTZ63bMI9K7Bri0yCctmGcfpLsonfqi6eHaJ-ey1jM8IqTMKRSSumdgskFiweGW2Q2bo60teFWWrsixbSpQJBOmEd=w1280",
+      "larghezza": "20",
+      "altezza": "30"
+    },
+    {
+      "slug": "paese-marino",
+      "titolo": "Paese marino",
+      "categoria": "mare",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72u8-DksGtTWXAwYIdDJ6U92ogJzpjcQVDa0KiXubmF0jNXXp3bo8eT5-G66tjlbnyeUvtSHhtFNizYkOxtH95l-2n-2NuulH-jsHDIP-2r6hGGEPim1L2CRP4bBmEPPNe7WU1Xbj1g_MNcFAX8WUcbeopQlkldSjmq_FnPjjyv99PTKmUMZa-ZhWCov7sViK6UlSAVWVs1Pqqb4FmHFvyh-pgnk0iGVA8M3lr3KoG8=w1280"
+    },
+    {
+      "slug": "paesaggio-innevato-18x24",
+      "titolo": "Paesaggio innevato",
+      "categoria": "paesaggi",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72twBYuzLiCw-uJryhqln99AUeyPIXQoh1hNB0ZZXpIRMBHsf7Msp-RyYvxWeSpuFBBsRFsMTZ1QOUXdkIkq_cJbNWmVQEfC8uQLIPz2YThDXMlFWJiyE1vkBIuG9jCi1r76DkRgtOrAJwLdUlHKm81vNwD58BeC5OrZjLwCSoZIMgtINWO7KrRaK3N3xQRLsqWSmJSWDJLXIb88m3d9LyXyVyHO-7f4ILVPF8RQ0cU=w1280",
+      "larghezza": "18",
+      "altezza": "24"
+    },
+    {
+      "slug": "regali-in-arrivo-18x24",
+      "titolo": "Regali in arrivo",
+      "categoria": "natale",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72s4568nb54-4S3cF0hTL-07U0Ei5na2Tz8XnTb0-5LWQZEa9g6jkB7TVp0MDykxJXu5PD-m99yu_RbhKwzScejzjdWhJeEKNaa3D3rB5RCZA40locVYQ_hSV-Q6SP7ZXpB4EVMwYhv7rRqk7GlJOnfx9_ecm2ww5cF_bM4sCbN-vtYN4KvFwMWonOwdq-n_31HXXeWmBw9Kz-tVQiS7FOGY4IBWTw0TOn9_6La_AH8=w1280",
+      "larghezza": "18",
+      "altezza": "24"
+    },
+    {
+      "slug": "fatina-12x9-5",
+      "titolo": "Fatina",
+      "categoria": "mare",
+      "tecnica": "Olio su legno recuperato dal mare",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72ur7-D5LYueQUSUO7O5UZKou0G1-81kgqHdT8oWSi-2BuKbSe3gR7A3i-OKMEll5ZQ47Q7lpJsOKyVOPuEgiC-DlATLMkS3DaEdxOS_1UQZF16_lektbtpMxS5bxPCQK0xGERjf11UajLlAm5B_Vy8LIuzrzTeOMwP64EHdwk-rzpHFVky_we_1EelYIHnJM7dQo4fEa6y1dW5toaKTSUxR4RaRevzfLhMjDnlwTzU=w1280",
+      "larghezza": "12",
+      "altezza": "9,5"
+    },
+    {
+      "slug": "pesci-19x12",
+      "titolo": "Pesci",
+      "categoria": "mare",
+      "tecnica": "Olio su legno recuperato dal mare",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72tXt21diiMHBSjfkJ8pEP9cvpvdWCLDu2w3DPYiRdAXKKMpxFuTdtm3wXKJquUEsIul2szBxUGvw1flSoLAGhERu3NzzZ26cwXwhFgKgf1x3WDZoTYf5LnuIY2mKWir1SB4ZV5_KTYIWN2WgpNgB7HQ1oLPOClDm67Q-xMnGq-iZWr6IhSjxdMJfmldWDZNvugxTPf572gAN2HZbZytmbgEyefwzaL2Pr9ASpSwyCo=w1280",
+      "larghezza": "19",
+      "altezza": "12"
+    },
+    {
+      "slug": "paesaggio-sotto-le-stelle-30x6-6",
+      "titolo": "Paesaggio sotto le stelle",
+      "categoria": "mare",
+      "tecnica": "Olio su legno recuperato dal mare",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72umXTV4hQqh7XJI84nqYWhp29uj7yiNc_7zXBiVYNWUmrV1_D9IbEFMYXkA54ENAkqeNFrlkRzQXBXHIRkRrbqCDuGuaz7RkttuGSDD8xRrHjnvrs94xT6K91dX157snnS0l39mz-5hTukWEZdHhsm8ABbHpTCkbYa9nQZzSskLgqxuysknCJnwS0BTSTVuSunw20uXcXwUefhz0h8iawOltljV0-nuPL007VaVKbs=w1280",
+      "larghezza": "30",
+      "altezza": "6,6"
+    },
+    {
+      "slug": "pesci-25x58",
+      "titolo": "Pesci",
+      "categoria": "mare",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72u4jfcja6GNFnFf-1sm-j7oTO0BNxqx3IYp1WMJmPufGFOwuHjAppOkc88oU3lfcB-5gUpmePgoJw55MU3vWSa9xPxqXyY7W5LwicMXWvn5OHfqcXaNzHYyIgG6oPDjlQvdydwupS144NWPgB4NcuVX3mg7vYinbFIXcmMPlXldsJzk_n7vsjYVqo3K7T1YfZZmRzolkI59K6VPUKv_lBfLDE9op89tjj3UVVzzPWU=w1280",
+      "larghezza": "25",
+      "altezza": "58"
+    },
+    {
+      "slug": "la-citta-galleggiante-10x50",
+      "titolo": "La città galleggiante",
+      "categoria": "mare",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72vyZU4lsq8n9nXmCFrUJz_HhZR3rse_CrfjNsQmbtXvJuE5V_yIv-Bybz5amHLBqM3weljotuL8Z04voWJyNgoSknyjFA1GKiArONq4X5Hu-7PTZ6ySMWrq82vPvMHIbZB2D8B_sGT4u2WlPIVE7IQL6ECcALfchH44lfY65QS2-CDnSm7E9sxyhrKLCZbiRewU3EVykxLdqwptXkGgnTdhmeYR-skirLDPnwFo=w1280",
+      "larghezza": "10",
+      "altezza": "50"
+    },
+    {
+      "slug": "onde-50x70",
+      "titolo": "Onde",
+      "categoria": "mare",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72v3ctU04Ad7LvfXNcO-mgpXMzjxypObp8vloZ8wIRthb6ehxaPx7ZLgKx5QCT6pbpl-iRV8srXHvjsyc6n5aLOiTaCn8yflc1HZgAWjJ9x-DiM7gx7hTZxDjA_AEzMKAUqAeyDRM8esbTDB7SGH8ptkjw54EeT0irV_7eIueLB8Tk93PRa34SebWHWxJUxE6D1hYtmChYGucMN8c3p1lmzOWUbY3a7j2-yOXRwWIp0=w1280",
+      "larghezza": "50",
+      "altezza": "70"
+    },
+    {
+      "slug": "la-fata-danzante-30x40",
+      "titolo": "La fata danzante",
+      "categoria": "fate",
+      "tecnica": "Olio",
+      "src": "https://sites.google.com/sitesv-images-rt/AMxu72tzeZ50sCK5hebHIWEVBxn5TvcTg1KD4nkBOQh91sjcegnCk1XNIzfmNnLuC4RJsCohlQeKdm5mgBp6kEE0dIBdBm96Ptd0EHec3NygOPcnU-IKihlO-YLko_Inz9rnl_xlUpA4mB5OriNoRj1_o0CcD5r5z63jdyWxewq8b18fPVizd-YPO7Nm9hZ__7bQSBn86ZyMKMLtCwUDMxEMJ_CjVhfm6XuoOYGYMq7T4_Q=w1280",
+      "larghezza": "30",
+      "altezza": "40"
+    }
+  ]
+}

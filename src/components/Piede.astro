@@ -1,0 +1,11 @@
+---
+interface Props { email?: string | null; instagram?: string | null }
+const { email, instagram } = Astro.props;
+---
+<footer class="piede">
+  <p>© {new Date().getFullYear()} Giuliana. Tutte le opere sono quadri a olio originali.</p>
+  <p class="piede-link">
+    {email && <a href={`mailto:${email}`}>{email}</a>}
+    {instagram && <a href={instagram} rel="noopener">Instagram</a>}
+  </p>
+</footer>

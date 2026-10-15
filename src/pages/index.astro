@@ -1,0 +1,134 @@
+---
+import Base from "../layouts/Base.astro";
+import Testata from "../components/Testata.astro";
+import Piede from "../components/Piede.astro";
+import Quadro from "../components/Quadro.astro";
+import { getOpere, getTemi, getImpostazioni } from "../lib/sanity";
+
+const [opere, tuttiITemi, imp] = await Promise.all([getOpere(), getTemi(), getImpostazioni()]);
+const conta = (slug: string) => opere.filter((o) => o.tema?.slug === slug).length;
+const temi = tuttiITemi.filter((t) => conta(t.slug) > 0); // solo i temi con almeno un quadro
+const hero = imp.fotoApertura;
+---
+<Base immagine={hero?.grande ?? opere[0]?.immagine.grande}>
+  <Testata />
+
+  <main id="contenuto">
+    <section class="apertura">
+      {hero && (
+        <div class="apertura-quadro">
+          <img
+            src={hero.src}
+            srcset={hero.srcset}
+            sizes="(min-width: 760px) 60vw, 100vw"
+            width={hero.larghezza}
+            height={hero.altezza}
+            alt={hero.alt}
+            fetchpriority="high"
+            style={hero.segnaposto ? `background-image:url(${hero.segnaposto})` : undefined}
+          />
+        </div>
+      )}
+      <div class="apertura-testo">
+        <h1>Il magico mondo<br />di Giuly</h1>
+        {imp.fraseApertura && <p>{imp.fraseApertura}</p>}
+      </div>
+    </section>
+
+    <section id="opere" class="opere" aria-labelledby="titolo-opere">
+      <div class="opere-testa">
+        <h2 id="titolo-opere">Opere</h2>
+        {temi.length > 1 && (
+          <div class="filtri" role="group" aria-label="Filtra per tema">
+            <button type="button" data-filtro="tutte" aria-pressed="true">Tutte <span>{opere.length}</span></button>
+            {temi.map((t) => (
+              <button type="button" data-filtro={t.slug} aria-pressed="false">{t.nome} <span>{conta(t.slug)}</span></button>
+            ))}
+          </div>
+        )}
+      </div>
+      <div class="parete">
+        {opere.map((o, i) => <Quadro opera={o} indice={i} />)}
+      </div>
+    </section>
+
+    {imp.chiSonoHtml && (
+      <section id="chi-sono" class="racconto" aria-labelledby="titolo-racconto">
+        {imp.chiSonoTitolo && <h2 id="titolo-racconto">{imp.chiSonoTitolo}</h2>}
+        <div class="racconto-testo" set:html={imp.chiSonoHtml} />
+      </section>
+    )}
+
+    <section id="contatti" class="contatti" aria-labelledby="titolo-contatti">
+      <h2 id="titolo-contatti">Contatti</h2>
+      <p>Per informazioni su un quadro, scrivimi indicando il titolo.</p>
+      <p class="recapiti">
+        {imp.email && <a href={`mailto:${imp.email}`}>{imp.email}</a>}
+        {imp.instagram && <a href={imp.instagram} rel="noopener">Instagram</a>}
+      </p>
+    </section>
+  </main>
+
+  <Piede email={imp.email} instagram={imp.instagram} />
+
+  <dialog class="lente" aria-label="Opera ingrandita">
+    <button type="button" class="chiudi" aria-label="Chiudi">×</button>
+    <button type="button" class="freccia prec" aria-label="Opera precedente">‹</button>
+    <figure>
+      <img alt="" />
+      <figcaption>
+        <span class="titolo"></span>
+        <span class="dettagli"></span>
+        <a class="scheda" href="/">Apri la scheda dell'opera</a>
+      </figcaption>
+    </figure>
+    <button type="button" class="freccia succ" aria-label="Opera successiva">›</button>
+  </dialog>
+
+  <script>
+    const quadri = [...document.querySelectorAll<HTMLElement>(".quadro")];
+    const filtri = [...document.querySelectorAll<HTMLButtonElement>("[data-filtro]")];
+
+    filtri.forEach((b) =>
+      b.addEventListener("click", () => {
+        const f = b.dataset.filtro!;
+        filtri.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+        quadri.forEach((q) => (q.hidden = f !== "tutte" && q.dataset.tema !== f));
+      }),
+    );
+
+    const lente = document.querySelector<HTMLDialogElement>(".lente")!;
+    const img = lente.querySelector("img")!;
+    const tit = lente.querySelector(".titolo")!;
+    const det = lente.querySelector(".dettagli")!;
+    const scheda = lente.querySelector<HTMLAnchorElement>(".scheda")!;
+    let corrente = 0;
+
+    const visibili = () => quadri.filter((q) => !q.hidden).map((q) => q.querySelector<HTMLButtonElement>(".cornice")!);
+
+    function mostra(btn: HTMLButtonElement) {
+      corrente = visibili().indexOf(btn);
+      img.src = btn.dataset.grande!;
+      img.alt = btn.dataset.titolo!;
+      tit.textContent = btn.dataset.titolo!;
+      det.textContent = btn.dataset.didascalia!;
+      scheda.href = btn.dataset.scheda!;
+    }
+    function sposta(d: number) {
+      const v = visibili();
+      mostra(v[(corrente + d + v.length) % v.length]);
+    }
+
+    document.querySelectorAll<HTMLButtonElement>(".cornice").forEach((btn) =>
+      btn.addEventListener("click", () => { mostra(btn); lente.showModal(); }),
+    );
+    lente.querySelector(".chiudi")!.addEventListener("click", () => lente.close());
+    lente.querySelector(".prec")!.addEventListener("click", () => sposta(-1));
+    lente.querySelector(".succ")!.addEventListener("click", () => sposta(1));
+    lente.addEventListener("click", (e) => { if (e.target === lente) lente.close(); });
+    lente.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") sposta(-1);
+      if (e.key === "ArrowRight") sposta(1);
+    });
+  </script>
+</Base>

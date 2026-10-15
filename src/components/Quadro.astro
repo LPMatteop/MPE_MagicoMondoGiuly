@@ -1,0 +1,38 @@
+---
+import type { Opera } from "../lib/sanity";
+
+interface Props { opera: Opera; indice: number }
+const { opera, indice } = Astro.props;
+const { immagine: img } = opera;
+const didascalia = [opera.tecnica, opera.misure].filter(Boolean).join(", ");
+---
+<figure class="quadro" data-tema={opera.tema?.slug ?? ""}>
+  <button
+    class="cornice"
+    type="button"
+    data-grande={img.grande}
+    data-titolo={opera.titolo}
+    data-didascalia={didascalia}
+    data-scheda={`/opere/${opera.slug}`}
+    aria-label={`Ingrandisci ${opera.titolo}`}
+  >
+    <img
+      src={img.src}
+      srcset={img.srcset}
+      sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw"
+      width={img.larghezza}
+      height={img.altezza}
+      alt={img.alt}
+      loading={indice < 4 ? "eager" : "lazy"}
+      decoding="async"
+      style={img.segnaposto ? `background-image:url(${img.segnaposto})` : undefined}
+    />
+  </button>
+  <figcaption>
+    <a class="titolo" href={`/opere/${opera.slug}`}>{opera.titolo}</a>
+    <span class="dettagli">
+      {didascalia}
+      {opera.venduto && <span class="etichetta">Venduto</span>}
+    </span>
+  </figcaption>
+</figure>
