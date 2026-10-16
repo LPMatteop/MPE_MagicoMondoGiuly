@@ -3,14 +3,40 @@ import Base from "../layouts/Base.astro";
 import Testata from "../components/Testata.astro";
 import Piede from "../components/Piede.astro";
 import Quadro from "../components/Quadro.astro";
-import { getOpere, getTemi, getImpostazioni } from "../lib/sanity";
+import { getOpere, getTemi, getImpostazioni, riassunto } from "../lib/sanity";
 
 const [opere, tuttiITemi, imp] = await Promise.all([getOpere(), getTemi(), getImpostazioni()]);
 const conta = (slug: string) => opere.filter((o) => o.tema?.slug === slug).length;
 const temi = tuttiITemi.filter((t) => conta(t.slug) > 0); // solo i temi con almeno un quadro
 const hero = imp.fotoApertura;
+
+const artista = imp.nomeArtista ?? "Giuliana";
+const sito = new URL("/", Astro.site).href;
+const datiStrutturati = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": `${sito}#sito`, name: "Il Magico Mondo di Giuly", url: sito, inLanguage: "it" },
+    {
+      "@type": "Person",
+      "@id": `${sito}#artista`,
+      name: artista,
+      jobTitle: "Pittrice",
+      url: sito,
+      ...(hero ? { image: hero.grande } : {}),
+      ...(imp.instagram ? { sameAs: [imp.instagram] } : {}),
+    },
+  ],
+};
+const descrizione = imp.descrizioneSito ?? riassunto(imp.fraseApertura) ?? undefined;
+const immagineHome = hero?.grande ?? opere[0]?.immagine.grande;
+const immagineHomeAlt = hero?.alt || opere[0]?.immagine.alt;
 ---
-<Base immagine={hero?.grande ?? opere[0]?.immagine.grande}>
+<Base
+  descrizione={descrizione}
+  immagine={immagineHome}
+  immagineAlt={immagineHomeAlt}
+  datiStrutturati={datiStrutturati}
+>
   <Testata />
 
   <main id="contenuto">
@@ -109,7 +135,7 @@ const hero = imp.fotoApertura;
     function mostra(btn: HTMLButtonElement) {
       corrente = visibili().indexOf(btn);
       img.src = btn.dataset.grande!;
-      img.alt = btn.dataset.titolo!;
+      img.alt = btn.dataset.alt!;
       tit.textContent = btn.dataset.titolo!;
       det.textContent = btn.dataset.didascalia!;
       scheda.href = btn.dataset.scheda!;

@@ -33,6 +33,12 @@ export interface Tema {
 export interface Opera {
   slug: string;
   titolo: string;
+  aggiornato: string; // data ISO dell'ultima modifica, per la sitemap
+  larghezza: number | null;
+  altezza: number | null;
+  titoloSeo: string | null; // titolo per Google, se Giuliana l'ha scritto
+  descrizioneSeo: string | null; // descrizione per Google, se scritta
+  descrizioneTesto: string | null; // la descrizione lunga in testo semplice
   tema: Tema | null;
   tecnica: string | null;
   misure: string | null; // "50 × 70 cm"
@@ -46,6 +52,8 @@ export interface Opera {
 }
 
 export interface Impostazioni {
+  nomeArtista: string | null;
+  descrizioneSito: string | null;
   fotoApertura: Immagine | null;
   fraseApertura: string | null;
   chiSonoTitolo: string | null;
@@ -82,13 +90,32 @@ function immagine(img: any, alt: string): Immagine {
 const formattaNumero = (n: number) => n.toLocaleString("it-IT", { maximumFractionDigits: 1 });
 const html = (blocchi: any[] | null) => (blocchi?.length ? toHTML(blocchi) : null);
 
+const testoSemplice = (blocchi: any[] | null) =>
+  blocchi?.length
+    ? blocchi
+        .map((b) => (b.children ?? []).map((c: any) => c.text ?? "").join(""))
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim() || null
+    : null;
+
+// Accorcia un testo a ~155 caratteri (la misura che Google mostra), senza spezzare le parole
+export function riassunto(testo: string | null | undefined, max = 155): string | null {
+  const t = testo?.replace(/\s+/g, " ").trim();
+  if (!t) return null;
+  if (t.length <= max) return t;
+  const taglio = t.slice(0, max - 1);
+  return taglio.slice(0, Math.max(taglio.lastIndexOf(" "), 60)).replace(/[,;:.\s]+$/, "") + "…";
+}
+
 // ---------- Query ----------
 
 const CAMPI_IMMAGINE = `{ ..., asset->{ _id, metadata { lqip, dimensions { width, height } } } }`;
 
 const QUERY_OPERE = `*[_type == "opera" && defined(slug.current) && defined(immagine.asset)]
   | order(coalesce(ordine, 999999) asc, titolo asc) {
-    titolo, "slug": slug.current, tecnica, larghezza, altezza, anno, descrizione,
+    _updatedAt, titolo, "slug": slug.current, tecnica, larghezza, altezza, anno, descrizione,
+    titoloSeo, descrizioneSeo,
     prezzo, venduto, linkPagamento,
     "tema": tema->{ nome, "slug": slug.current },
     immagine ${CAMPI_IMMAGINE}
@@ -98,7 +125,7 @@ const QUERY_TEMI = `*[_type == "tema" && defined(slug.current)]
   | order(coalesce(ordine, 999999) asc, nome asc) { nome, "slug": slug.current }`;
 
 const QUERY_IMPOSTAZIONI = `*[_id == "impostazioni"][0] {
-  fraseApertura, chiSonoTitolo, chiSonoTesto, email, instagram,
+  nomeArtista, descrizioneSito, fraseApertura, chiSonoTitolo, chiSonoTesto, email, instagram,
   fotoApertura ${CAMPI_IMMAGINE}
 }`;
 
@@ -113,6 +140,12 @@ export function getOpere(): Promise<Opera[]> {
       return {
         slug: o.slug,
         titolo: o.titolo,
+        aggiornato: o._updatedAt,
+        larghezza: o.larghezza ?? null,
+        altezza: o.altezza ?? null,
+        titoloSeo: o.titoloSeo?.trim() || null,
+        descrizioneSeo: o.descrizioneSeo?.trim() || null,
+        descrizioneTesto: testoSemplice(o.descrizione),
         tema: o.tema?.slug ? o.tema : null,
         tecnica: o.tecnica ? (TECNICHE[o.tecnica] ?? o.tecnica) : null,
         misure: o.larghezza && o.altezza ? `${formattaNumero(o.larghezza)} × ${formattaNumero(o.altezza)} cm` : null,
@@ -122,7 +155,8 @@ export function getOpere(): Promise<Opera[]> {
         venduto,
         linkPagamento: o.linkPagamento ?? null,
         acquistabile: !venduto && prezzo !== null && Boolean(o.linkPagamento),
-        immagine: immagine(o.immagine, o.titolo),
+        // Il testo alternativo scritto da Giuliana, altrimenti il titolo
+        immagine: immagine(o.immagine, o.immagine.alt?.trim() || o.titolo),
       };
     }),
   );
@@ -136,6 +170,8 @@ export async function getTemi(): Promise<Tema[]> {
 export async function getImpostazioni(): Promise<Impostazioni> {
   const i = (await client.fetch<any>(QUERY_IMPOSTAZIONI)) ?? {};
   return {
+    nomeArtista: i.nomeArtista?.trim() || null,
+    descrizioneSito: i.descrizioneSito?.trim() || null,
     fotoApertura: i.fotoApertura?.asset ? immagine(i.fotoApertura, i.fotoApertura.alt ?? "") : null,
     fraseApertura: i.fraseApertura ?? null,
     chiSonoTitolo: i.chiSonoTitolo ?? null,

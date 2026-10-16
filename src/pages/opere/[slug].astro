@@ -2,7 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import Testata from "../../components/Testata.astro";
 import Piede from "../../components/Piede.astro";
-import { getOpere, getImpostazioni, formattaPrezzo, type Opera } from "../../lib/sanity";
+import { getOpere, getImpostazioni, formattaPrezzo, riassunto, type Opera } from "../../lib/sanity";
 
 export async function getStaticPaths() {
   const opere = await getOpere();
@@ -20,13 +20,52 @@ interface Props { opera: Opera; precedente: Opera; successiva: Opera }
 const { opera, precedente, successiva } = Astro.props;
 const imp = await getImpostazioni();
 const img = opera.immagine;
+const artista = imp.nomeArtista ?? "Giuliana";
 const scheda = [opera.tecnica, opera.misure, opera.anno].filter(Boolean).join(", ");
 const oggetto = encodeURIComponent(`Informazioni su «${opera.titolo}»`);
+
+// Titolo e descrizione per Google: prima quelli scritti nello Studio, poi un testo costruito dai dati
+const titoloPagina = opera.titoloSeo ?? `${opera.titolo} | Il Magico Mondo di Giuly`;
+const descrizione =
+  opera.descrizioneSeo ??
+  riassunto(opera.descrizioneTesto) ??
+  `${opera.titolo}${scheda ? `, ${scheda}` : ""}. Un quadro di ${artista}.`;
+
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const datiStrutturati = {
+  "@context": "https://schema.org",
+  "@type": "VisualArtwork",
+  "@id": `${url}#opera`,
+  name: opera.titolo,
+  url,
+  image: img.grande,
+  description: descrizione,
+  creator: { "@type": "Person", name: artista },
+  ...(opera.tecnica ? { artMedium: opera.tecnica } : {}),
+  artform: "Dipinto",
+  ...(opera.tema ? { genre: opera.tema.nome } : {}),
+  ...(opera.anno ? { dateCreated: String(opera.anno) } : {}),
+  ...(opera.larghezza ? { width: { "@type": "QuantitativeValue", value: opera.larghezza, unitCode: "CMT" } } : {}),
+  ...(opera.altezza ? { height: { "@type": "QuantitativeValue", value: opera.altezza, unitCode: "CMT" } } : {}),
+  ...(opera.acquistabile
+    ? {
+        offers: {
+          "@type": "Offer",
+          price: opera.prezzo,
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url,
+        },
+      }
+    : {}),
+};
 ---
 <Base
-  titolo={`${opera.titolo} | Il Magico Mondo di Giuly`}
-  descrizione={`${opera.titolo}${scheda ? `, ${scheda}` : ""}. Un quadro di Giuly.`}
+  titolo={titoloPagina}
+  descrizione={descrizione}
   immagine={img.grande}
+  immagineAlt={img.alt}
+  datiStrutturati={datiStrutturati}
 >
   <Testata />
 

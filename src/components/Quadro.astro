@@ -12,6 +12,7 @@ const didascalia = [opera.tecnica, opera.misure].filter(Boolean).join(", ");
     type="button"
     data-grande={img.grande}
     data-titolo={opera.titolo}
+    data-alt={img.alt}
     data-didascalia={didascalia}
     data-scheda={`/opere/${opera.slug}`}
     aria-label={`Ingrandisci ${opera.titolo}`}

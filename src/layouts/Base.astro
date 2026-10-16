@@ -1,12 +1,24 @@
 ---
 import "../styles/global.css";
-interface Props { titolo?: string; descrizione?: string; immagine?: string }
+interface Props {
+  titolo?: string;
+  descrizione?: string;
+  immagine?: string;
+  immagineAlt?: string;
+  datiStrutturati?: object | null; // JSON-LD per Google
+}
 const {
   titolo = "Il Magico Mondo di Giuly",
   descrizione = "Quadri a olio di Giuliana: fate, Santa Lucia, paesi innevati e storie di mare.",
   immagine,
+  immagineAlt,
+  datiStrutturati = null,
 } = Astro.props;
 const canonico = new URL(Astro.url.pathname, Astro.site);
+// Finché PUBLIC_NOINDEX=true (variabile della build su Cloudflare) il sito chiede a Google di non indicizzarlo
+const nonIndicizzare = import.meta.env.PUBLIC_NOINDEX === "true";
+// "<" va trasformato per non poter chiudere per errore il tag <script>
+const json = datiStrutturati ? JSON.stringify(datiStrutturati).replace(/</g, "\\u003c") : null;
 ---
 <!doctype html>
 <html lang="it">
@@ -15,12 +27,19 @@ const canonico = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{titolo}</title>
     <meta name="description" content={descrizione} />
+    {nonIndicizzare && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonico} />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Il Magico Mondo di Giuly" />
     <meta property="og:url" content={canonico} />
     <meta property="og:title" content={titolo} />
     <meta property="og:description" content={descrizione} />
     {immagine && <meta property="og:image" content={immagine} />}
+    {immagine && immagineAlt && <meta property="og:image:alt" content={immagineAlt} />}
+    <meta name="twitter:card" content={immagine ? "summary_large_image" : "summary"} />
+    {json && <script is:inline type="application/ld+json" set:html={json} />}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
     <link rel="preconnect" href="https://cdn.sanity.io" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
